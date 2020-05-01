@@ -9,6 +9,7 @@ export default class WindowsStart extends React.Component {
         <h1>Don't die a hero.</h1>
         <h4>Why do this? For Justice?</h4>
         <h4>For Honor?</h4>
+        <h4>For Power?</h4>
         <div>
           <iframe
             width="420"

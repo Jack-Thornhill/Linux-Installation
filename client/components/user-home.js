@@ -29,17 +29,15 @@ export const UserHome = () => {
         </p>
       </div>
       <div>
-        <Link to="/linuxStart">
-          <h2>
-            Click Here to Follow Linux Installation Guide (Also, make sure to
-            have a usb with 8gb of memory)
-          </h2>
-        </Link>
+        <h2>
+          Click Below to Follow Linux Installation Guide (Also, make sure to
+          have a usb with 8gb of memory)
+        </h2>
+        <Link to="/linuxStart">Linux Installation</Link>
       </div>
+      <h2>Otherwise, use this link to Join the Windows Struggle Squad</h2>
       <div>
-        <Link to="/windowsStart">
-          <h2>Click Here to Join the Windows Struggle Squad</h2>
-        </Link>
+        <Link to="/windowsStart">Windows Setup</Link>
       </div>
     </div>
   )
