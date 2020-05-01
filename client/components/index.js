@@ -6,4 +6,5 @@
 export {default as Navbar} from './navbar'
 export {default as UserHome} from './user-home'
 export {default as LinuxStart} from './LinuxStart'
+export {default as WindowsStart} from './WindowsStart'
 export {Login, Signup} from './auth-form'
