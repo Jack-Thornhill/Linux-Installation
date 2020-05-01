@@ -6,7 +6,7 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <h1>Linux/Windows @ FSA Installation Guide</h1>
+    <h1>Using Linux/Windows @ FSA Installation Guide</h1>
     <nav>
       {isLoggedIn ? (
         <div>
@@ -20,7 +20,6 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <div>
           {/* The navbar will show these links before you log in */}
           <Link to="/home">Home</Link>
-          <Link to="/signup">Sign Up</Link>
           <Link to="/linuxStart">The Linux Installation Guide</Link>
           <Link to="/windowsStart">The Windows Setup Guide</Link>
         </div>

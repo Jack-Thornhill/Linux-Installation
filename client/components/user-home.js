@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 /**
  * COMPONENT
@@ -28,6 +28,19 @@ export const UserHome = () => {
           the most part you'll be able to follow along.
         </p>
       </div>
+      <div>
+        <Link to="/linuxStart">
+          <h2>
+            Click Here to Follow Linux Installation Guide (Also, make sure to
+            have a usb with 8gb of memory)
+          </h2>
+        </Link>
+      </div>
+      <div>
+        <Link to="/windowsStart">
+          <h2>Click Here to Join the Windows Struggle Squad</h2>
+        </Link>
+      </div>
     </div>
   )
 }
@@ -42,10 +55,3 @@ const mapState = state => {
 }
 
 export default connect(mapState)(UserHome)
-
-/**
- * PROP TYPES
- */
-UserHome.propTypes = {
-  email: PropTypes.string
-}
