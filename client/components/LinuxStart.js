@@ -7,7 +7,7 @@ export default class LinuxStart extends React.Component {
       <div>
         <h1>Starting FSA with Linux</h1>
         <div>
-          <body>
+          <p>
             Thank you for heeding my advice and taking the plunge into Linux!
             Here you will choose whether you need help with Installation, or if
             you just need help, formatting and downloading the various
@@ -16,7 +16,7 @@ export default class LinuxStart extends React.Component {
             I will be having you try using Linux Mint, which I find even simpler
             to use and the shock to the system for Windows Users is small, since
             the layout is so similar.
-          </body>
+          </p>
         </div>
         <div>
           <Link to="/linuxMintInstall">
