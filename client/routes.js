@@ -6,7 +6,8 @@ import {
   UserHome,
   LinuxStart,
   WindowsStart,
-  LinuxMintInstall
+  LinuxMintInstall,
+  LinuxMintAppConfigure
 } from './components'
 import {me} from './store'
 
@@ -28,6 +29,10 @@ class Routes extends Component {
         <Route path="/linuxStart" component={LinuxStart} />
         <Route path="/windowsStart" component={WindowsStart} />
         <Route path="/linuxMintInstall" component={LinuxMintInstall} />
+        <Route
+          path="/linuxMintAppConfigure"
+          component={LinuxMintAppConfigure}
+        />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}

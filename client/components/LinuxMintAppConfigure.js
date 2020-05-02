@@ -1,4 +1,9 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
+import React from 'react'
+import {Link} from 'react-router-dom'
+import AppConfigLin from './AppConfigLin'
 
-// export const LinuxMintAppConfigure = () => {};
+const LinuxMintAppConfigure = () => {
+  return <AppConfigLin />
+}
+
+export default LinuxMintAppConfigure
