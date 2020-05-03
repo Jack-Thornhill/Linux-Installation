@@ -101,8 +101,10 @@ const Install = () => {
               If you'd like to Dual boot and have both Windows and Linux on your
               machine, you'll have to be a little more careful
             </b>
+            <br />
           </div>
           <div className="step-six">
+            <br />
             <b>6. Dual Booting Windows and Linux</b>
             <p className="step-six">
               I’ll add a dual boot guide later, but it can be a little trickier

@@ -7,7 +7,8 @@ import {
   LinuxStart,
   WindowsStart,
   LinuxMintInstall,
-  LinuxMintAppConfigure
+  LinuxMintAppConfigure,
+  WindowsRestore
 } from './components'
 import {me} from './store'
 
@@ -34,6 +35,7 @@ class Routes extends Component {
           path="/linuxMintAppConfigure"
           component={LinuxMintAppConfigure}
         />
+        <Route exact path="/windowsRestore" component={WindowsRestore} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
