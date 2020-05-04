@@ -1,10 +1,20 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {styled} from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
+import {Button, TableCell} from '@material-ui/core'
 
 const MyStyle = styled(Button)({
   background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+  border: 0,
+  borderRadius: 3,
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  color: 'white',
+  height: 48,
+  padding: '0 30px'
+})
+
+const Steps = styled(TableCell)({
+  background: 'green',
   border: 0,
   borderRadius: 3,
   boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
@@ -19,7 +29,9 @@ export default function Install() {
       <h1>Linux Mint Installation Guide</h1>
       <div>
         <div className="step-one">
-          <b>1. Navigate to the Linux Mint Installation Page</b>
+          <Steps>
+            <b>1. Navigate to the Linux Mint Installation Page</b>
+          </Steps>
         </div>
         <div className="mint-link">
           <MyStyle>
@@ -37,7 +49,9 @@ export default function Install() {
           </p>
         </div>
         <div className="step-two">
-          <b>2. Navigate to the Rufus Download Page</b>
+          <Steps>
+            <b>2. Navigate to the Rufus Download Page</b>
+          </Steps>
           <div className="rufus-link">
             <MyStyle>
               <a href="https://rufus.ie/">Rufus Download Page</a>
@@ -54,11 +68,17 @@ export default function Install() {
             </p>
           </div>
           <div className="step-three">
-            <b>3. Shutting Down/Restarting Computer and going into Boot Mode</b>
+            <Steps>
+              <b>
+                3. Shutting Down/Restarting Computer and going into Boot Mode
+              </b>
+            </Steps>
             <div className="boot-link">
-              <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode">
-                Windows Docs For Boot Mode
-              </a>
+              <MyStyle>
+                <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode">
+                  Windows Docs For Boot Mode
+                </a>
+              </MyStyle>
               <p className="step-three">
                 From here, you'll need to follow along on your phone or another
                 computer, because we're going into boot mode on your computer.
@@ -91,7 +111,9 @@ export default function Install() {
             </div>
           </div>
           <div className="step-four">
-            <b>4. Boot Mode Menu</b>
+            <Steps>
+              <b>4. Boot Mode Menu</b>
+            </Steps>
             <p className="step-four">
               From here, use your right key, to switch over to settings. Change
               bootup to UEFI BIOS or legacy BIOS depending on the opposite of
@@ -102,7 +124,9 @@ export default function Install() {
             </p>
           </div>
           <div className="step-five">
-            <b>5. Finishing up Linux Install</b>
+            <Steps>
+              <b>5. Finishing up Linux Install</b>
+            </Steps>
             <p className="step-five">
               Congrats! You made it into the linux mint desktop! At this point
               to complete the installation on your computer, just click the
@@ -121,7 +145,9 @@ export default function Install() {
           </div>
           <div className="step-six">
             <br />
-            <b>6. Dual Booting Windows and Linux</b>
+            <Steps>
+              <b>6. Dual Booting Windows and Linux</b>
+            </Steps>
             <p className="step-six">
               I’ll add a dual boot guide later, but it can be a little trickier
               since you have to make sure you give enough space to linux and
@@ -135,12 +161,13 @@ export default function Install() {
       </div>
       <div />
       <div>
-        <Link to="/linuxMintAppConfigure">
-          <h1>
-            Click Here to Move on to adding and configuring necessary apps for
-            linux
-          </h1>
-        </Link>
+        <h1>
+          Click Below to Move on to adding and configuring necessary apps for
+          linux
+        </h1>
+        <MyStyle>
+          <Link to="/linuxMintAppConfigure">Configure Development Apps</Link>
+        </MyStyle>
       </div>
     </div>
   )
