@@ -8,7 +8,8 @@ import {
   WindowsStart,
   LinuxMintInstall,
   LinuxMintAppConfigure,
-  WindowsRestore
+  WindowsRestore,
+  DualBoot
 } from './components'
 import {me} from './store'
 
@@ -35,6 +36,7 @@ class Routes extends Component {
           path="/linuxMintAppConfigure"
           component={LinuxMintAppConfigure}
         />
+        <Route exact path="/dualBoot" component={DualBoot} />
         <Route exact path="/windowsRestore" component={WindowsRestore} />
         {isLoggedIn && (
           <Switch>

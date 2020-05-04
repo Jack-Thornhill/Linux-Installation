@@ -58,6 +58,9 @@ const Navbar = ({handleClick, isLoggedIn}) => (
             <Link to="/windowsStart">The Windows Setup Guide</Link>
           </MyStyle>
           <MyStyle>
+            <Link to="/dualBoot">Guide To Dual Booting Win/Linux</Link>
+          </MyStyle>
+          <MyStyle>
             <Link to="/windowsRestore">
               Oh no, I've wiped my Windows and I can't get up.
             </Link>
