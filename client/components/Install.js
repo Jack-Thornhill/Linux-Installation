@@ -1,7 +1,19 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {styled} from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
 
-const Install = () => {
+const MyStyle = styled(Button)({
+  background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+  border: 0,
+  borderRadius: 3,
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  color: 'white',
+  height: 48,
+  padding: '0 30px'
+})
+
+export default function Install() {
   return (
     <div>
       <h1>Linux Mint Installation Guide</h1>
@@ -10,9 +22,11 @@ const Install = () => {
           <b>1. Navigate to the Linux Mint Installation Page</b>
         </div>
         <div className="mint-link">
-          <a href="https://www.linuxmint.com/download.php">
-            Linux Mint Download Page
-          </a>
+          <MyStyle>
+            <a href="https://www.linuxmint.com/download.php">
+              Linux Mint Download Page
+            </a>
+          </MyStyle>
           <p className="step-one">
             -On the Page, Click the 64-bit Cinnamon Link. You can also choose
             other desktops, but this is the one I am most familiar with. -Choose
@@ -25,7 +39,9 @@ const Install = () => {
         <div className="step-two">
           <b>2. Navigate to the Rufus Download Page</b>
           <div className="rufus-link">
-            <a href="https://rufus.ie/">Rufus Download Page</a>
+            <MyStyle>
+              <a href="https://rufus.ie/">Rufus Download Page</a>
+            </MyStyle>
             <p className="step-two">
               This app will take our Linux download and turn our usb into a
               bootable drive. After downloading and opening Rufus, Select your
@@ -129,5 +145,3 @@ const Install = () => {
     </div>
   )
 }
-
-export default Install

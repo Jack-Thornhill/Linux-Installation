@@ -1,40 +1,79 @@
 import React from 'react'
 // import chromeSS from '../../public/googlechromedl.png'
+import {styled} from '@material-ui/core/styles'
+import {Button, TableCell} from '@material-ui/core'
+
+const Header = styled(TableCell)({
+  background: '#191970',
+  border: 0,
+  borderRadius: 3,
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  color: 'white',
+  height: 48,
+  padding: '0 30px'
+})
+
+const MyStyle = styled(Button)({
+  background: 'lightblue',
+  border: 0,
+  borderRadius: 3,
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  color: 'white',
+  height: 48,
+  padding: '0 30px'
+})
 
 const AppConfigLin = () => {
   return (
     <div>
       <h1>Apps You will Need For Your Time At FullStack</h1>
       <b className="app-list">
-        -Node -npm -slack -zoom -vscode -prettier -eslint -google Chrome
-        -postgresql
+        <Header>
+          <ul>
+            <li>Node </li>
+            <li>npm</li>
+            <li>Slack</li>
+            <li>Zoom</li>
+            <li>Vscode</li>
+            <li>Prettier</li>
+            <li>Eslint</li>
+            <li>Google Chrome</li>
+            <li>Postgresql</li>
+          </ul>
+        </Header>
       </b>
       <h3>
         An Important Note: Whenever you're downloading one of the Linux versions
-        of an app, you'll be choosing the Ubuntu/Debian version.<br /> Linux
-        Mint I believe is built with similar specs, so it will always use the
-        same version as these other Linux Distributions
+        of an app, you'll be choosing the Ubuntu/Debian version.
+        <br /> Linux Mint I believe is built with similar specs, so it will
+        always use the same version as these other Linux Distributions
       </h3>
       <div className="web-browser">
         {/* <img src={chromeSS} alt="chrome screenshot" /> */}
       </div>
       <div className="app-step-one">
-        <b>Step 1 Downloading Google Chrome</b>
+        <Header>
+          <b>Step 1 Downloading Google Chrome</b>
+        </Header>
         <p className="app-step-one">
           Open up the FireFox Browser pre-installed on your Linux Mint. Simply
           Navigate to the Google Chrome Download page and choose the
           debian/ubtunu version.
         </p>
         <div className="google-link">
-          <a href="https://www.google.com/chrome/">
-            Google Chrome Download Page
-          </a>
+          <MyStyle>
+            <a href="https://www.google.com/chrome/">
+              Google Chrome Download Page
+            </a>
+          </MyStyle>
           <br />
         </div>
       </div>
       <br />
       <div className="app-step-two">
-        <b>Step 2 Downloading and Updating Nodejs/npm</b>
+        <Header>
+          <b>Step 2 Downloading and Updating Nodejs/npm</b>
+        </Header>
         <p>
           Open up your terminal. in your terminal type the following command:{' '}
           <b>sudo apt update</b> After this, type <b>sudo apt install nodejs</b>{' '}
@@ -50,11 +89,17 @@ const AppConfigLin = () => {
         </p>
       </div>
       <div className="app-step-three">
-        <b>Step 3 Slack and Zoom</b>
+        <Header>
+          <b>Step 3 Slack and Zoom</b>
+        </Header>
         <div>
-          <a href="https://slack.com/downloads/linux"> Slack Download </a>
+          <MyStyle>
+            <a href="https://slack.com/downloads/linux"> Slack Download </a>
+          </MyStyle>
           <br />
-          <a href="https://zoom.us/download"> Zoom Download </a>
+          <MyStyle>
+            <a href="https://zoom.us/download"> Zoom Download </a>
+          </MyStyle>
           <p>
             Slack just click the link and download. For zoom, select Mint from
             the dropdown and then download.
@@ -62,9 +107,16 @@ const AppConfigLin = () => {
         </div>
       </div>
       <div className="app-step-four">
-        <b>Step 4 VSCode, Prettier and ESlint</b>
+        <Header>
+          <b>Step 4 VSCode, Prettier and ESlint</b>
+        </Header>
         <div>
-          <a href="https://code.visualstudio.com/download"> VSCode Download </a>
+          <MyStyle>
+            <a href="https://code.visualstudio.com/download">
+              {' '}
+              VSCode Download{' '}
+            </a>
+          </MyStyle>
           <p>
             Go with the .deb version, and once your vscode is down installing,
             open it up and click on the extensions, or open the extensions with{' '}
@@ -75,7 +127,9 @@ const AppConfigLin = () => {
         </div>
       </div>
       <div className="app-step-five">
-        <b>Step 5 Postgresql</b>
+        <Header>
+          <b>Step 5 Postgresql</b>
+        </Header>
         <p>
           Saved the worst for last. This part is by far the most annoying on
           both Windows and Linux. By now though I have this down to a science.
@@ -117,7 +171,9 @@ const AppConfigLin = () => {
         </div>
       </div>
       <div className="app-step-six">
-        <b>Step 6 Breathe a Sigh of Relief</b>
+        <Header>
+          <b>Step 6 Breathe a Sigh of Relief</b>
+        </Header>
         <p>
           You're all done. Your machine is good to go and can now work with sql,
           node and express. If you have any issues on things I missed please let
