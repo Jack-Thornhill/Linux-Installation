@@ -13,19 +13,32 @@ const MyStyle = styled(Button)({
   padding: '0 30px'
 })
 
+const Warning = styled(Button)({
+  background: 'red',
+  border: 0,
+  borderRadius: 3,
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  color: 'black',
+  height: 48,
+  padding: '0 30px'
+})
+
 // Add in audio on page navigation
 
 export default class WindowsStart extends React.Component {
   render() {
     return (
       <div>
-        <h1>Don't die a hero.</h1>
+        <Warning>
+          <h1>Don't die a hero.</h1>
+        </Warning>
         <h4>Why do this? For Justice?</h4>
         <h4>For Honor?</h4>
         <h4>For Power?</h4>
         <p>
           If you still want to go ahead with Windows, I'd first recommend
-          looking through this guide<br />
+          looking through this guide
+          <br />
           by another former member of Fullstack
         </p>
         <MyStyle>
